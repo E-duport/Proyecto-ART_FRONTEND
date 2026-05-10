@@ -115,14 +115,15 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no caben en una sola */
-    gap: 1rem;
-    margin: 1rem
+    gap: 20px; /* Espacio entre las tarjetas */
+    align-items: stretch;
 }
 
 .tarjeta { 
     background-color: #865114;
     color: #0b090e;
     width: 20rem;
+    min-height: 22rem;
 
     display: flex;
     flex-direction: column;
@@ -133,7 +134,15 @@ body {
     align-items: center;
 
     gap: 0.5rem;
-    padding: 0.5rem
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+}
+
+/* 2. Empujamos el contenedor del botón al fondo */
+.tarjeta .seccion-3 {
+    margin-top: auto; 
+    padding-top: 20px; /* Un poco de espacio extra sobre el botón */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
 }
 
 .tarjeta img {
