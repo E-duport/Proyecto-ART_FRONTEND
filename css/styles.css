@@ -122,7 +122,8 @@ body {
 .tarjeta { 
     background-color: #865114;
     color: #0b090e;
-    width: 20rem;
+    max-width: 20rem;
+    width: 90%;
     min-height: 22rem;
 
     display: flex;
@@ -271,15 +272,66 @@ body {
     text-align: center;
 }
 
+video, img {
+    max-width: 100%;
+    height: auto;
+}
+
 #contacto main {
     margin-bottom: 50px; /* Separa el formulario del inicio del footer */
 }
 
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
-  header,
-  footer {
-    flex-direction: column;
-  }
+/* Media query para celulares y tablets pequeñas */
+@media (max-width: 768px) {
+    
+    /* 1. Cabecera: Apilamos soporte, logo y carrito */
+    .cabecera {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 100px; /* Logo más pequeño en móvil */
+        height: auto;
+    }
+
+    /* 2. Navegación: Menos espacio entre links */
+    .nav-list {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap; /* Si son muchos, que bajen */
+    }
+
+    /* 3. Títulos: Achicamos el tamaño excesivo */
+    .especiales {
+        font-size: 28px;
+        padding: 20px 10px;
+    }
+
+    /* 4. Video: Aseguramos que no se pase del ancho */
+    .seccion-1 video {
+        width: 90% !important; /* Forzamos a que no use los 600px del HTML */
+        height: auto;
+    }
+
+    /* 5. Imagen del Local: ¡Clave! */
+    .local img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 6. Footer: Una columna para que sea legible */
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* 7. Arreglo para el formulario si estás en la página de contacto */
+    .row-info {
+        grid-template-columns: 1fr;
+    }
 }
