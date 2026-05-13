@@ -69,6 +69,9 @@ body {
     gap: 0.5rem;
     padding-right: 20px;
 }
+wa-icon {
+    font-size: 1.2rem;
+}
 
 .navegar {
     position: sticky;
