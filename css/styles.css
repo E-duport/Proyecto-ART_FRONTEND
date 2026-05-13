@@ -178,10 +178,11 @@ body {
 .form {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
     background-color: #815e05;
-    padding: 2rem;
+    padding: 1.5rem; /* Bajamos de 2rem a 1.5rem para ganar espacio */
     border-radius: 0.5rem;
-    max-width: 700px;
-    margin: 100px auto;
+    max-width: 500px; /* Reducimos el ancho máximo de 700 a 500 */
+    margin: 40px auto; /* Reducimos el margen superior/inferior de 100px a 40px */
+    width: 90%; /* Esto asegura que en el celu no toque los bordes pegados */
 }
 
 .form fieldset {
