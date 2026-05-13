@@ -25,14 +25,38 @@ body {
 }
 
 #contacto {
+    /* Fondo */
     background-image: url('../img/fondo_contacto.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
+    background-attachment: fixed; /* Mantiene la imagen fija al scrollear */
+
+    /* Estructura */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Texto y Estilo */
     color: #fdfcfc;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 16px; /* Mejor para dispositivos móviles */
+}
+
+/* Tip: Asegura que el contenido empuje el footer al final */
+#contacto main {
+    flex: 1;
+}
+
+#contacto main {
+    margin-bottom: 50px; /* Separa el formulario del inicio del footer */
+}
+
+.contacto-seccion3 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px; /* Dale un respiro al formulario */
+    gap: 10px; /* Espacio entre los botones */
 }
 
 .cabecera {
@@ -69,6 +93,7 @@ body {
     gap: 0.5rem;
     padding-right: 20px;
 }
+
 wa-icon {
     font-size: 1.2rem;
 }
@@ -279,10 +304,6 @@ wa-icon {
 video, img {
     max-width: 100%;
     height: auto;
-}
-
-#contacto main {
-    margin-bottom: 50px; /* Separa el formulario del inicio del footer */
 }
 
 
